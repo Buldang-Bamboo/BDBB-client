@@ -107,7 +107,7 @@ function Form({ onSubmit, verifier }) {
               onKeyPress={preventSubmitOnEnter}
               style={{ width: '25%', minWidth: 250 }}
               type="text"
-              placeholder="제목 (안쓰셔도 됩니다.)"
+              placeholder="제목 (안쓰셔도 상관 없습니다.)"
             />
             <label htmlFor="cert-input">학생 인증</label>
             <input
