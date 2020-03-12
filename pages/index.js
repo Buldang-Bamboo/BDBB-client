@@ -115,7 +115,7 @@ export default function Index({ postData, verifier }) {
     <>
       <Head>
         <meta property="og:title" content="BDBB" />
-        <link rel="icon" href="<%= BASE_URL %>favico.ico"></link>
+        <link rel="icon" href="<%= BASE_URL %>favicon.ico"></link>
         <meta
           property="og:description"
           content="불당고 익명 게시판, 천안불당고등학교 대나무숲"
