@@ -198,7 +198,7 @@ export default function Index({ postData, verifier }) {
 Index.getInitialProps = async ctx => {
   delete axios.defaults.headers.common['Authorization']
 
-  const fetchPosts = getPosts({ count: 15, safe: false })
+  const fetchPosts = getPosts({ count: 1000, safe: true })
   const fetchVerifier = getVerifier({ safe: true })
 
   const postData = (await fetchPosts).data
