@@ -115,7 +115,6 @@ export default function Index({ postData, verifier }) {
     <>
       <Head>
         <meta property="og:title" content="BDBB" />
-        <link rel="icon" href="<%= BASE_URL %>favicon.ico"></link>
         <meta
           property="og:description"
           content="불당고 익명 게시판, 천안불당고등학교 대나무숲"
@@ -128,7 +127,8 @@ export default function Index({ postData, verifier }) {
       <Navigator>
         <div className="nav-items">
           <a onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
-            {theme === 'dark' ? '밝은' : '어두운'} 테마</a>
+            {theme === 'dark' ? '밝은' : '어두운'} 테마
+            </a>
           <a onClick={() => handleModal('delete', {})}>제보 관리</a>
         </div>
       </Navigator>
