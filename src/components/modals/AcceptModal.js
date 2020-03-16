@@ -114,7 +114,7 @@ function AcceptModal({ post, modalHandler, onAccept, onUpdateFbLink }) {
         <CopyToClipboard
           text={
             `#${newNumber}번 제보 😁` +
-            `https://bamboo.budlang.xyz/post/${newNumber}`
+            `\nhttps://bamboo.budlang.xyz/post/${newNumber}`
           }
           onCopy={() => setCopySuccess(true)}
         >
