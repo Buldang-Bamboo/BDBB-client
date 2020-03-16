@@ -108,6 +108,20 @@ function AcceptModal({ post, modalHandler, onAccept, onUpdateFbLink }) {
         {isCopySuccess && (
           <span className="clipboard-text">클립보드에 복사되었습니다.</span>
         )}
+        <p>
+          4. 아래 버튼을 클릭하고 페이스북 페이지에 해당 제보 댓글로 붙여넣기하여 업로드하세요.
+        </p>
+        <CopyToClipboard
+          text={
+            `#${newNumber}번 제보 😁` +
+            `https://bamboo.budlang.xyz/post/${newNumber}`
+          }
+          onCopy={() => setCopySuccess(true)}
+        >
+          <button type="button" disabled={!newNumber}>
+            클립보드에 복사
+          </button>
+        </CopyToClipboard>
         <p>3. 게시글의 URL을 아래에 붙여넣기 하세요.</p>
         <label htmlFor="link-input">페이스북 링크</label>
         <input
@@ -119,7 +133,6 @@ function AcceptModal({ post, modalHandler, onAccept, onUpdateFbLink }) {
           placeholder="페이스북 링크를 입력하세요"
           required
         />
-
         <button type="submit" disabled={isLoading}>
           {!isLoading ? (
             '확인'
@@ -127,7 +140,6 @@ function AcceptModal({ post, modalHandler, onAccept, onUpdateFbLink }) {
             <FiLoader className={classNames('spin', spinAnimation.className)} />
           )}
         </button>
-
         <style jsx>{`
           * {
             font-family: 'Spoqa Han Sans', sans-serif;
