@@ -13,7 +13,7 @@
   "author": "JoungChanok <chanok9417@kakao.com>",
   "license": "MIT",
   "engines": {
-    "node": "^10"
+    "node": "^12"
   },
   "dependencies": {
     "axios": "^0.19.2",
