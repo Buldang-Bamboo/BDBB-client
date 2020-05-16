@@ -23,7 +23,7 @@ function ThemeWrapper({ children }) {
   return (
     <>
       <Head>
-        <title>🔥 대나무숲 🔥</title>
+        <title>🎍 대나무숲 🎍</title>
         // 테마 전환시 깨짐 방지
         <link
           rel="stylesheet"
