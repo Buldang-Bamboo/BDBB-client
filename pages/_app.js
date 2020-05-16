@@ -23,7 +23,7 @@ function ThemeWrapper({ children }) {
   return (
     <>
       <Head>
-        <title>BDBB</title>
+        <title>🔥 대나무숲 🔥</title>
         // 테마 전환시 깨짐 방지
         <link
           rel="stylesheet"
@@ -80,13 +80,6 @@ ThemeWrapper.propTypes = {
 
 class CustomApp extends App {
   static async getInitialProps({ Component, ctx }) {
-    // const proto = ctx.req
-    //   ? ctx.req.headers['x-forwarded-proto']
-    //   : window.location.protocol.replace(':', '')
-    // const host = ctx.req
-    //   ? ctx.req.headers['x-forwarded-host'] || ctx.req.headers.host
-    //   : window.location.host
-    // axios.defaults.baseURL = `${proto}://${host}/`
 
     return {
       pageProps:

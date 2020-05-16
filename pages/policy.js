@@ -5,7 +5,7 @@ function Policy() {
   return (
     <>
       <Head>
-        <meta property="og:title" content="BDBB" />
+        <meta property="og:title" content="🔥 대나무숲 🔥" />
         <meta
           property="og:description"
           content="불당고 익명 게시판, 천안불당고등학교 대나무숲"
