@@ -37,7 +37,7 @@ function Login() {
         path: '/',
         expires: new Date(jwt.decode(fetchedToken.data.token).exp * 1000)
       })
-      Router.push('/a1p4ca')
+      Router.push('/bdbb')
     } catch (err) {
       if (!err.response) {
         toast.error('네트워크 문제')
@@ -363,7 +363,7 @@ Admin.propTypes = {
   userData: PropTypes.object
 }
 
-function A1P4CA({ isLoginPage, postData, userData }) {
+function BDBB({ isLoginPage, postData, userData }) {
   return isLoginPage ? (
     <Login />
   ) : (
@@ -371,7 +371,7 @@ function A1P4CA({ isLoginPage, postData, userData }) {
   )
 }
 
-A1P4CA.getInitialProps = async ctx => {
+BDBB.getInitialProps = async ctx => {
   const cookies = new Cookie(ctx.req && ctx.req.headers.cookie)
   const token = cookies.get('token')
 
@@ -422,7 +422,7 @@ A1P4CA.getInitialProps = async ctx => {
   }
 }
 
-A1P4CA.propTypes = {
+BDBB.propTypes = {
   postData: PropTypes.shape({
     posts: PropTypes.array.isRequired,
     cursor: PropTypes.string,
@@ -433,4 +433,4 @@ A1P4CA.propTypes = {
   isLoginPage: PropTypes.bool
 }
 
-export default A1P4CA
+export default BDBB
