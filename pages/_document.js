@@ -10,11 +10,9 @@ class CustomDocument extends Document {
     return (
       <Html>
         <Head>
-          <meta property="fb:pages" content="1816017501965810" />
-          {/* Global Site Tag (gtag.js) - Google Analytics */}
           <script
             async
-            src={`https://www.googletagmanager.com/gtag/js?id=UA-128564038-3`}
+            src={`https://www.googletagmanager.com/gtag/js?id=UA-166898544-1`}
           />
           <script
             dangerouslySetInnerHTML={{
@@ -22,14 +20,9 @@ class CustomDocument extends Document {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'UA-128564038-3');
+            gtag('config', 'UA-166898544-1');
           `
             }}
-          />
-          <script
-            data-ad-client="ca-pub-4039783749152993"
-            async
-            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
           />
           <link rel="shortcut icon" href="/favicon.ico" />
           <link
