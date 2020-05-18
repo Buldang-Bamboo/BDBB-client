@@ -1,6 +1,6 @@
 require('dotenv').config()
 const withCSS = require('@zeit/next-css')
-const withPWA = require('next-pwa')
+// const withPWA = require('next-pwa')
 
 module.exports = withCSS({
   webpack(config) {
@@ -26,8 +26,8 @@ module.exports = withCSS({
   }
 })
 
-module.exports = withPWA({
-  pwa: {
-      dest: 'public'
-  }
-})
+// module.exports = withPWA({
+//   pwa: {
+//       dest: 'public'
+//   }
+// })
