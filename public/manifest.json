@@ -1,8 +1,8 @@
 {
   "name": "불당고 대나무숲 베타",
   "short_name": "대나무숲 베타",
-  "theme_color": "#2196f3",
-  "background_color": "#2196f3",
+  "theme_color": "#FFFFFF",
+  "background_color": "#FFFFFF",
   "display": "standalone",
   "Scope": "/",
   "start_url": "/",

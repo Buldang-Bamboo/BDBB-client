@@ -10,6 +10,13 @@ class CustomDocument extends Document {
     return (
       <Html>
         <Head>
+        <meta name="theme-color" content="default"/>
+        <meta name="apple-mobile-web-app-capable" content="yes"/>
+        <meta name="apple-mobile-web-app-status-bar-style" content="default"/>
+        <meta name="apple-mobile-web-app-title" content="PWA 테스트"/>
+        <link rel="apple-touch-icon" href="./icons/icon_192x192.png"/>
+        <link rel="manifest" href="/manifest.json"/>
+        <link rel="shortcut icon" href="/favicon.ico" />
           <script
             async
             src={`https://www.googletagmanager.com/gtag/js?id=UA-166898544-1`}
@@ -24,7 +31,6 @@ class CustomDocument extends Document {
           `
             }}
           />
-          <link rel="shortcut icon" href="/favicon.ico" />
           <link
             rel="preload"
             as="font"
