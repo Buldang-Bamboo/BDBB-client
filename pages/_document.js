@@ -10,6 +10,7 @@ class CustomDocument extends Document {
     return (
       <Html>
         <Head>
+        <meta name="google-site-verification" content="RcLGz0wjHzRThfMPZ8W9J56dKGlX2pxbgo_tarJEomY" />
         <link rel="shortcut icon" href="/favicon.ico" />
           <script
             async
