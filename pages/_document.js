@@ -10,18 +10,6 @@ class CustomDocument extends Document {
     return (
       <Html>
         <Head>
-        <meta charset='utf-8' />
-        <meta http-equiv='X-UA-Compatible' content='IE=edge' />
-        <meta name='viewport' content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no' />
-        <meta name='description' content='Description' />
-        <meta name='keywords' content='Keywords' />
-        <title>Next.js PWA Example</title>
-        <meta name="theme-color" content="default"/>
-        <meta name="apple-mobile-web-app-capable" content="yes"/>
-        <meta name="apple-mobile-web-app-status-bar-style" content="default"/>
-        <meta name="apple-mobile-web-app-title" content="PWA 테스트"/>
-        <link rel="apple-touch-icon" href="./icons/icon_192x192.png"/>
-        <link rel="manifest" href="/manifest.json"/>
         <link rel="shortcut icon" href="/favicon.ico" />
           <script
             async
