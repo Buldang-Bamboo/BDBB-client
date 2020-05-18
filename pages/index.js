@@ -114,6 +114,8 @@ export default function Index({ postData, verifier }) {
   return (
     <>
       <Head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
         <meta property="og:title" content="🎍 대나무숲 🎍" />
         <meta
           property="og:description"
@@ -123,6 +125,13 @@ export default function Index({ postData, verifier }) {
           property="og:image"
           content="https://i.postimg.cc/Qd4bcD6d/Bamboo-Forest-baner.png"
         />
+        <link rel='manifest' href='/manifest.json' />
+        <meta name="theme-color" content="red"/>
+        <meta name="mobile-web-app-capable" content="yes"/>
+        <link rel="apple-touch-icon" href="./icons/icon-512x512.png"/>
+        <meta name="apple-mobile-web-app-capable" content="yes"/>
+        <meta name="apple-mobile-web-app-status-bar-style" content="default"/>
+
       </Head>
       <Navigator>
         <div className="nav-items">
