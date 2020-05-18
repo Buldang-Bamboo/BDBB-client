@@ -13,6 +13,6 @@ jobs:
         with:
           name: chanok9417/bdbb-client 
           username: chanok9417
-          password: ${{ secrets.DOCKER_PASSWORD }}
+          password: joung0406
           dockerfile: Dockerfile
           snapshot: true
