@@ -126,7 +126,6 @@ export default function Index({ postData, verifier }) {
           content="https://i.postimg.cc/Qd4bcD6d/Bamboo-Forest-baner.png"
         />
         <link rel='manifest' href='/manifest.json' />
-        <meta name="theme-color" content="red"/>
         <meta name="mobile-web-app-capable" content="yes"/>
         <link rel="apple-touch-icon" href="./icons/icon-512x512.png"/>
         <meta name="apple-mobile-web-app-capable" content="yes"/>
