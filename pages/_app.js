@@ -33,6 +33,13 @@ function ThemeWrapper({ children }) {
           rel="stylesheet"
           href={`https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/${theme}.css`}
         />
+        <meta name="theme-color" content="status bar color"/>
+        <meta name="apple-mobile-web-app-capable" content="yes"/>
+        <meta name="apple-mobile-web-app-status-bar-style" content="ios status bar color"/>
+        <meta name="apple-mobile-web-app-title" content="대숲 베타"/>
+        <link rel="apple-touch-icon" href="./icons/icon_192x192.png"/>
+        <link rel="shortcut icon" href="./icons/icon_192x192.png"/>
+        <link rel="manifest" href="/manifest.json"/>
       </Head>
       <ThemeContext.Provider value={[theme, t => setTheme(t)]}>
         {children}
