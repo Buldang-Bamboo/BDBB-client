@@ -123,6 +123,13 @@ export default function Index({ postData, verifier }) {
           property="og:image"
           content="https://i.postimg.cc/Qd4bcD6d/Bamboo-Forest-baner.png"
         />
+        <meta name="theme-color" content="status bar color"/>
+        <meta name="apple-mobile-web-app-capable" content="yes"/>
+        <meta name="apple-mobile-web-app-status-bar-style" content="ios status bar color"/>
+        <meta name="apple-mobile-web-app-title" content="대숲 베타"/>
+        <link rel="apple-touch-icon" href="./icons/icon_192x192.png"/>
+        <link rel="shortcut icon" href="./icons/icon_192x192.png"/>
+        <link rel="manifest" href="/manifest.json"/>
       </Head>
       <Navigator>
         <div className="nav-items">
