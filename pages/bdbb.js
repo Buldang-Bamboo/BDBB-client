@@ -437,4 +437,4 @@ BDBB.propTypes = {
   isLoginPage: PropTypes.bool
 }
 
-export default bdbb
+export default BDBB
