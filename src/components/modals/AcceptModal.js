@@ -97,7 +97,7 @@ function AcceptModal({ post, modalHandler, onAccept, onUpdateFbLink }) {
             ` ${timeText(post.createdAt)}\n\n` +
             (post.title ? `<${post.title}>\n\n` : '') +
             post.content +
-            `\n\n#${(post.tag || '').replace(/\s/g, '')}` 
+            `\n\n#${(post.tag || '').replace(/\s/g, '')}`
           }
           onCopy={() => setCopySuccess(true)}
         >

@@ -24,52 +24,53 @@ function ThemeWrapper({ children }) {
     <>
       <Head>
         <title>🎍 대나무숲 🎍</title>
-        // 테마 전환시 깨짐 방지
         <link
           rel="stylesheet"
-          href={`https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/light.css`}
+          href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/light.css"
         />
         <link
           rel="stylesheet"
           href={`https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/${theme}.css`}
         />
       </Head>
-      <ThemeContext.Provider value={[theme, t => setTheme(t)]}>
+      <ThemeContext.Provider value={[theme, (t) => setTheme(t)]}>
         {children}
       </ThemeContext.Provider>
       <ToastContainer />
-      <style jsx global>{`
-        body {
-          background: ${isLight ? '#f3f3f3' : '#202b38'};
-        }
-        input,
-        select,
-        textarea,
-        button {
-          background-color: ${isLight ? '#e8f5e9' : '#161f27'};
-        }
-        button:hover {
-          background-color: ${isLight ? '#a5d6a7' : '#324759'};
-        }
-        .tag {
-          background-color: ${isLight ? '#e8f5e9' : '#161f27'};
-        }
-        .card,
-        .modal,
-        form {
-          background-color: ${isLight ? '#fff' : '#253542'};
-        }
-        .card {
-          border-color: ${isLight ? '#e8f5e9' : '#161f27'} !important;
-        }
-        a,
-        strong {
-          color: ${isLight ? '#4caf50' : '#0076d1'};
-        }
-        .grecaptcha-badge {
-          visibility: hidden;
-        }
-      `}</style>
+      <style jsx global>
+        {`
+          body {
+            background: ${isLight ? '#f3f3f3' : '#202b38'};
+          }
+          input,
+          select,
+          textarea,
+          button {
+            background-color: ${isLight ? '#e8f5e9' : '#161f27'};
+          }
+          button:hover {
+            background-color: ${isLight ? '#a5d6a7' : '#324759'};
+          }
+          .tag {
+            background-color: ${isLight ? '#e8f5e9' : '#161f27'};
+          }
+          .card,
+          .modal,
+          form {
+            background-color: ${isLight ? '#fff' : '#253542'};
+          }
+          .card {
+            border-color: ${isLight ? '#e8f5e9' : '#161f27'} !important;
+          }
+          a,
+          strong {
+            color: ${isLight ? '#4caf50' : '#0076d1'};
+          }
+          .grecaptcha-badge {
+            visibility: hidden;
+          }
+        `}
+      </style>
     </>
   )
 }
@@ -80,6 +81,13 @@ ThemeWrapper.propTypes = {
 
 class CustomApp extends App {
   static async getInitialProps({ Component, ctx }) {
+    // const proto = ctx.req
+    //   ? ctx.req.headers['x-forwarded-proto']
+    //   : window.location.protocol.replace(':', '')
+    // const host = ctx.req
+    //   ? ctx.req.headers['x-forwarded-host'] || ctx.req.headers.host
+    //   : window.location.host
+    // axios.defaults.baseURL = `${proto}://${host}/`
 
     return {
       pageProps:
