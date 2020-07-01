@@ -15,12 +15,10 @@ const spinAnimation = css.resolve`
   .spin {
     animation: spin 2s linear infinite;
   }
-
   @keyframes spin {
     from {
       transform: rotate(0deg);
     }
-
     to {
       transform: rotate(360deg);
     }
@@ -103,13 +101,14 @@ function Form({ onSubmit, verifier }) {
             <input
               id="title-input"
               value={title}
-              onChange={(e) => setTitle(e.target.value)}              
+              onChange={(e) => setTitle(e.target.value)}
               onKeyPress={preventSubmitOnEnter}
               style={{ width: '25%', minWidth: 250 }}
               type="text"
-              placeholder="제목"
+              placeholder="제목 (최대 20자)"
+              maxLength="20"
               required
-              />
+            />
             <label htmlFor="cert-input">학생 인증</label>
             <input
               id="cert-input"
@@ -179,66 +178,57 @@ function Form({ onSubmit, verifier }) {
         </>
       )}
       {spinAnimation.styles}
-      <style jsx>{`
-        * {
-          font-family: 'Spoqa Han Sans', sans-serif;
-        }
-
-        form {
-          margin-bottom: 1rem;
-          padding: 2rem;
-          border-radius: 7.5px;
-        }
-
-        .error {
-          text-align: center;
-          font-size: 14px;
-        }
-
-        .flex {
-          display: flex;
-          width: 100%;
-        }
-
-        input {
-          display: inline-block !important;
-          flex: 3;
-        }
-
-        select {
-          flex: 1;
-        }
-
-        @media screen and (max-width: 600px) {
+      <style jsx>
+        {`
+          * {
+            font-family: 'Spoqa Han Sans', sans-serif;
+          }
+          form {
+            margin-bottom: 1rem;
+            padding: 2rem;
+            border-radius: 7.5px;
+          }
+          .error {
+            text-align: center;
+            font-size: 14px;
+          }
           .flex {
-            flex-direction: column;
+            display: flex;
+            width: 100%;
           }
-
           input {
-            width: auto !important;
-            margin-right: 0;
+            display: inline-block !important;
+            flex: 3;
           }
-
           select {
-            max-width: 6rem;
+            flex: 1;
           }
-        }
-
-        label {
-          display: none;
-        }
-
-        select {
-          display: inline-block;
-          text-align: center;
-          margin: 0 0 6px 0;
-        }
-
-        .recaptcha-policy {
-          font-size: 0.7rem;
-          padding-bottom: 10px;
-        }
-      `}</style>
+          @media screen and (max-width: 600px) {
+            .flex {
+              flex-direction: column;
+            }
+            input {
+              width: auto !important;
+              margin-right: 0;
+            }
+            select {
+              max-width: 6rem;
+            }
+          }
+          label {
+            display: none;
+          }
+          select {
+            display: inline-block;
+            text-align: center;
+            margin: 0 0 6px 0;
+          }
+          .recaptcha-policy {
+            font-size: 0.7rem;
+            padding-bottom: 10px;
+          }
+        `}
+      </style>
     </form>
   )
 }
@@ -251,5 +241,6 @@ Form.propTypes = {
     error: PropTypes.string
   })
 }
+
 
 export default Form

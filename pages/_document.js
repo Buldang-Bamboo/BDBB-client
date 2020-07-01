@@ -10,11 +10,11 @@ class CustomDocument extends Document {
     return (
       <Html>
         <Head>
-        <meta name="google-site-verification" content="RcLGz0wjHzRThfMPZ8W9J56dKGlX2pxbgo_tarJEomY" />
-        <link rel="shortcut icon" href="/favicon.ico" />
+          <meta property="fb:pages" content="1816017501965810" />
+          {/* Global Site Tag (gtag.js) - Google Analytics */}
           <script
             async
-            src={`https://www.googletagmanager.com/gtag/js?id=UA-166898544-1`}
+            src="https://www.googletagmanager.com/gtag/js?id=UA-166898544-1"
           />
           <script
             dangerouslySetInnerHTML={{
@@ -25,6 +25,11 @@ class CustomDocument extends Document {
             gtag('config', 'UA-166898544-1');
           `
             }}
+          />
+          <script
+            data-ad-client="ca-pub-8146562096769982"
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
           />
           <link
             rel="preload"
@@ -46,14 +51,16 @@ class CustomDocument extends Document {
           <Main />
           <NextScript />
         </body>
-        <style jsx global>{`
-          * {
-            font-family: 'Iropke Batang', serif;
-          }
-          body {
-            transition: background-color 0.5s;
-          }
-        `}</style>
+        <style jsx global>
+          {`
+            * {
+              font-family: 'Iropke Batang', serif;
+            }
+            body {
+              transition: background-color 0.5s;
+            }
+          `}
+        </style>
       </Html>
     )
   }

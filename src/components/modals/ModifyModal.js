@@ -11,10 +11,12 @@ const spinAnimation = css.resolve`
   .spin {
     animation: spin 2s linear infinite;
   }
+
   @keyframes spin {
     from {
       transform: rotate(0deg);
     }
+
     to {
       transform: rotate(360deg);
     }
@@ -87,16 +89,20 @@ function ModifyModal({ post, modalHandler, onSubmit }) {
             * {
               font-family: 'Spoqa Han Sans', sans-serif;
             }
+
             .error {
               text-align: center;
               font-size: 14px;
             }
+
             input {
               display: inline-block !important;
             }
+
             label {
               display: none;
             }
+
             select {
               display: inline-block;
               text-align: center;

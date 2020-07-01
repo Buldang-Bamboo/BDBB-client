@@ -75,11 +75,7 @@ function AcceptModal({ post, modalHandler, onAccept, onUpdateFbLink }) {
           </strong>
         </p>
         <p>1. 아래 버튼을 눌러 글을 승인하세요.</p>
-        <button
-          type="button"
-          disabled={isLoading || post.status === 'ACCEPTED' || newNumber}
-          onClick={handleAccept}
-        >
+        <button type="button" disabled={isLoading} onClick={handleAccept}>
           {!isLoading ? (
             '승인'
           ) : (
@@ -127,7 +123,7 @@ function AcceptModal({ post, modalHandler, onAccept, onUpdateFbLink }) {
         <input
           id="link-input"
           value={fbLink}
-          onChange={e => setFbLink(e.target.value)}
+          onChange={(e) => setFbLink(e.target.value)}
           style={{ width: '80%', minWidth: 250 }}
           type="text"
           placeholder="페이스북 링크를 입력하세요"
@@ -140,34 +136,31 @@ function AcceptModal({ post, modalHandler, onAccept, onUpdateFbLink }) {
             <FiLoader className={classNames('spin', spinAnimation.className)} />
           )}
         </button>
-        <style jsx>{`
-          * {
-            font-family: 'Spoqa Han Sans', sans-serif;
-          }
-
-          .error {
-            text-align: center;
-            font-size: 14px;
-          }
-
-          input {
-            display: inline-block !important;
-          }
-
-          label {
-            display: none;
-          }
-
-          select {
-            display: inline-block;
-            text-align: center;
-          }
-
-          .clipboard-text {
-            font-size: 14px;
-            padding-left: 1rem;
-          }
-        `}</style>
+        <style jsx>
+          {`
+            * {
+              font-family: 'Spoqa Han Sans', sans-serif;
+            }
+            .error {
+              text-align: center;
+              font-size: 14px;
+            }
+            input {
+              display: inline-block !important;
+            }
+            label {
+              display: none;
+            }
+            select {
+              display: inline-block;
+              text-align: center;
+            }
+            .clipboard-text {
+              font-size: 14px;
+              padding-left: 1rem;
+            }
+          `}
+        </style>
       </form>
     </BaseModal>
   )
