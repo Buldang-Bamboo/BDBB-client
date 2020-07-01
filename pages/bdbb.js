@@ -367,7 +367,7 @@ Admin.propTypes = {
   userData: PropTypes.object
 }
 
-function bdbb({ isLoginPage, postData, userData }) {
+function BDBB({ isLoginPage, postData, userData }) {
   return isLoginPage ? (
     <Login />
   ) : (
@@ -375,7 +375,7 @@ function bdbb({ isLoginPage, postData, userData }) {
   )
 }
 
-bdbb.getInitialProps = async (ctx) => {
+BDBB.getInitialProps = async (ctx) => {
   const cookies = new Cookie(ctx.req && ctx.req.headers.cookie)
   const token = cookies.get('token')
 
@@ -426,7 +426,7 @@ bdbb.getInitialProps = async (ctx) => {
   }
 }
 
-bdbb.propTypes = {
+BDBB.propTypes = {
   postData: PropTypes.shape({
     posts: PropTypes.array.isRequired,
     cursor: PropTypes.string,
