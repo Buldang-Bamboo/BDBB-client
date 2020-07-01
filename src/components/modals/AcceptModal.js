@@ -94,7 +94,7 @@ function AcceptModal({ post, modalHandler, onAccept, onUpdateFbLink }) {
             (post.title ? `<${post.title}>\n\n` : '') +
             '링크를 클릭해 본문을 확인하세요.' +
             `\n\n#${(post.tag || '').replace(/\s/g, '')}` +
-            `\n\nhttps://bamboo.dimigo.dev/post/${newNumber}`
+            `\n\nhttps://bamboo.buldang.xyz/post/${newNumber}`
           }
           onCopy={() => setCopySuccess(true)}
         >
