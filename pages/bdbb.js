@@ -279,17 +279,21 @@ function Admin({ postData, userData }) {
             margin: 0;
             font-family: 'Spoqa Han Sans', sans-serif;
           }
+
           h1 > span {
             font-family: 'Spoqa Han Sans', sans-serif;
           }
+
           .nav {
             font-family: 'Spoqa Han Sans', sans-serif;
             display: flex;
             justify-content: space-between;
           }
+
           .nav-items {
             margin: auto 0;
           }
+
           .nav a {
             font-size: 18px;
             font-family: 'Spoqa Han Sans', sans-serif;
@@ -297,27 +301,33 @@ function Admin({ postData, userData }) {
             margin-left: 2rem;
             cursor: pointer;
           }
+
           @media screen and (max-width: 600px) {
             h1 {
               font-size: 1.8em;
             }
+
             .nav a {
               font-size: 14px;
               margin-left: 1rem;
             }
           }
+
           button {
             font-family: 'Spoqa Han Sans', sans-serif;
           }
+
           .info {
             text-align: center;
             font-size: 14px;
             font-family: 'Spoqa Han Sans', sans-serif;
             color: #41adff;
           }
+
           .info.info--error {
             color: #eb4034;
           }
+
           .icon-filter {
             cursor: pointer;
             float: right;
@@ -357,7 +367,7 @@ Admin.propTypes = {
   userData: PropTypes.object
 }
 
-function BDBB({ isLoginPage, postData, userData }) {
+function bdbb({ isLoginPage, postData, userData }) {
   return isLoginPage ? (
     <Login />
   ) : (
@@ -365,7 +375,7 @@ function BDBB({ isLoginPage, postData, userData }) {
   )
 }
 
-BDBB.getInitialProps = async ctx => {
+bdbb.getInitialProps = async (ctx) => {
   const cookies = new Cookie(ctx.req && ctx.req.headers.cookie)
   const token = cookies.get('token')
 
@@ -416,7 +426,7 @@ BDBB.getInitialProps = async ctx => {
   }
 }
 
-BDBB.propTypes = {
+bdbb.propTypes = {
   postData: PropTypes.shape({
     posts: PropTypes.array.isRequired,
     cursor: PropTypes.string,
@@ -427,4 +437,4 @@ BDBB.propTypes = {
   isLoginPage: PropTypes.bool
 }
 
-export default BDBB
+export default bdbb

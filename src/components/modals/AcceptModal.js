@@ -45,7 +45,7 @@ function AcceptModal({ post, modalHandler, onAccept, onUpdateFbLink }) {
     setLoading(false)
   }
 
-  const handleUpdateFbLink = async e => {
+  const handleUpdateFbLink = async (e) => {
     e.preventDefault()
 
     if (fbLink.length === 0) {
@@ -92,8 +92,9 @@ function AcceptModal({ post, modalHandler, onAccept, onUpdateFbLink }) {
             format(post.createdAt, 'yyyy년 MM월 dd일') +
             ` ${timeText(post.createdAt)}\n\n` +
             (post.title ? `<${post.title}>\n\n` : '') +
-            post.content +
-            `\n\n#${(post.tag || '').replace(/\s/g, '')}`
+            '링크를 클릭해 본문을 확인하세요.' +
+            `\n\n#${(post.tag || '').replace(/\s/g, '')}` +
+            `\n\nhttps://bamboo.dimigo.dev/post/${newNumber}`
           }
           onCopy={() => setCopySuccess(true)}
         >
@@ -104,21 +105,7 @@ function AcceptModal({ post, modalHandler, onAccept, onUpdateFbLink }) {
         {isCopySuccess && (
           <span className="clipboard-text">클립보드에 복사되었습니다.</span>
         )}
-        <p>
-          3. 아래 버튼을 클릭하고 페이스북 페이지에 해당 제보 댓글로 붙여넣기하여 업로드하세요.
-        </p>
-        <CopyToClipboard
-          text={
-            `#${newNumber}번 제보 😁` +
-            `\nbamboo.buldang.xyz/post/${newNumber}`
-          }
-          onCopy={() => setCopySuccess(true)}
-        >
-          <button type="button" disabled={!newNumber}>
-            클립보드에 복사
-          </button>
-        </CopyToClipboard>
-        <p>4. 게시글의 URL을 아래에 붙여넣기 하세요.</p>
+        <p>3. 게시글의 URL을 아래에 붙여넣기 하세요.</p>
         <label htmlFor="link-input">페이스북 링크</label>
         <input
           id="link-input"
@@ -129,6 +116,7 @@ function AcceptModal({ post, modalHandler, onAccept, onUpdateFbLink }) {
           placeholder="페이스북 링크를 입력하세요"
           required
         />
+
         <button type="submit" disabled={isLoading}>
           {!isLoading ? (
             '확인'
@@ -136,25 +124,31 @@ function AcceptModal({ post, modalHandler, onAccept, onUpdateFbLink }) {
             <FiLoader className={classNames('spin', spinAnimation.className)} />
           )}
         </button>
+
         <style jsx>
           {`
             * {
               font-family: 'Spoqa Han Sans', sans-serif;
             }
+
             .error {
               text-align: center;
               font-size: 14px;
             }
+
             input {
               display: inline-block !important;
             }
+
             label {
               display: none;
             }
+
             select {
               display: inline-block;
               text-align: center;
             }
+
             .clipboard-text {
               font-size: 14px;
               padding-left: 1rem;

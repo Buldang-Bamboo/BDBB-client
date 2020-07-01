@@ -19,22 +19,27 @@ function Navigator({ children }) {
             margin: 0;
             cursor: pointer;
           }
+
           .nav {
             margin-bottom: 2rem;
             display: flex;
             justify-content: space-between;
           }
+
           .nav__logo-wrapper {
             display: flex;
             justify-conetent: center;
           }
+
           .nav__logo {
             height: 3rem;
           }
+
           @media screen and (max-width: 600px) {
             h1 {
               font-size: 1.8em;
             }
+
             .nav__logo {
               height: 2.5rem;
             }

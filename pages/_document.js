@@ -10,7 +10,7 @@ class CustomDocument extends Document {
     return (
       <Html>
         <Head>
-          <meta property="fb:pages" content="1816017501965810" />
+          <meta property="fb:pages" content="323608828486429" />
           {/* Global Site Tag (gtag.js) - Google Analytics */}
           <script
             async

@@ -18,11 +18,13 @@ function BaseModal({ content, modalName, modalHandler, children }) {
             transition: opacity 0.25s;
             opacity: 1;
           }
+
           .closed {
             transition: opacity 0.25s;
             opacity: 0;
             pointer-events: none;
           }
+
           .modal {
             position: relative;
             max-width: 700px;
@@ -32,6 +34,7 @@ function BaseModal({ content, modalName, modalHandler, children }) {
             border-radius: 6px;
             box-shadow: 0 16px 36px -12px rgba(0, 0, 0, 0.5);
           }
+
           .modal__overlay {
             position: fixed;
             z-index: 999;
@@ -44,6 +47,7 @@ function BaseModal({ content, modalName, modalHandler, children }) {
             background: rgba(#151313, 0.7);
             overflow-y: auto;
           }
+
           .icon-close {
             cursor: pointer;
             float: right;

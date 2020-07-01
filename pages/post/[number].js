@@ -37,6 +37,7 @@ function Post({ post }) {
           * {
             font-family: 'Spoqa Han Sans', sans-serif;
           }
+
           .info-nf {
             padding: 2rem;
             border-radius: 7.5px;

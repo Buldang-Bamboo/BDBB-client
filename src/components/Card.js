@@ -12,8 +12,8 @@ function Card({ post, isManage = false, more = false }) {
   return (
     <div className="card">
       <h3>
-      <a href={post.fbLink} target="_blank" rel="noreferrer">
-          #{post.number || '?'}번 제보
+        <a href={post.fbLink} target="_blank" rel="noreferrer">
+          #{post.number || '?'}번_제보
         </a>
         <span className="check-fb">
           <FiArrowLeft style={{ verticalAlign: 'middle' }} /> 페이스북에서 확인
@@ -67,19 +67,23 @@ function Card({ post, isManage = false, more = false }) {
             border-radius: 7.5px;
             border: ${isManage ? '1px solid' : 'none'};
           }
+
           .card * {
             font-family: 'Iropke Batang', serif;
           }
+
           .tag {
             display: inline-block;
             padding: 0.5rem 1rem;
             border-radius: 7.5px;
             font-size: 14px;
           }
+
           h3 {
             display: flex;
             align-items: center;
           }
+
           .check-fb {
             opacity: 0;
             color: #41adff;
@@ -89,13 +93,16 @@ function Card({ post, isManage = false, more = false }) {
             margin-left: 1rem;
             transition: 0.25s opacity;
           }
+
           h3:hover .check-fb {
             opacity: 1;
           }
+
           h4 {
             font-size: 18px;
             font-weight: 600;
           }
+
           p {
             font-size: 18px;
             line-height: 1.825;
