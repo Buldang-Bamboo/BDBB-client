@@ -26,11 +26,7 @@ class CustomDocument extends Document {
           `
             }}
           />
-          <script
-            data-ad-client="ca-pub-8146562096769982"
-            async
-            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-          />
+          <script data-ad-client="ca-pub-8146562096769982" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
           <link
             rel="preload"
             as="font"
