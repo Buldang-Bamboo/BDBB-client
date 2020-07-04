@@ -82,19 +82,15 @@ function AcceptModal({ post, modalHandler, onAccept, onUpdateFbLink }) {
             <FiLoader className={classNames('spin', spinAnimation.className)} />
           )}
         </button>
-        <p>
-          2. 아래 버튼을 클릭하고 페이스북 페이지에 게시글로 붙여넣기하여
-          업로드하세요.
-        </p>
+        <p>2. 아래 버튼을 클릭하고 페이스북 페이지에 게시글로 붙여넣기하여 업로드하세요.</p>
         <CopyToClipboard
           text={
             `#${newNumber}번_제보\n` +
             format(post.createdAt, 'yyyy년 MM월 dd일') +
             ` ${timeText(post.createdAt)}\n\n` +
             (post.title ? `<${post.title}>\n\n` : '') +
-            '링크를 클릭해 본문을 확인하세요.' +
-            `\n\n#${(post.tag || '').replace(/\s/g, '')}` +
-            `\n\nhttps://bamboo.buldang.xyz/post/${newNumber}`
+            post.content +
+            `\n\n#${(post.tag || '').replace(/\s/g, '')}`
           }
           onCopy={() => setCopySuccess(true)}
         >
@@ -105,7 +101,19 @@ function AcceptModal({ post, modalHandler, onAccept, onUpdateFbLink }) {
         {isCopySuccess && (
           <span className="clipboard-text">클립보드에 복사되었습니다.</span>
         )}
-        <p>3. 게시글의 URL을 아래에 붙여넣기 하세요.</p>
+        <p>3. 아래 버튼을 클릭하고 해당 제보 게시글의 댓글에 붙여넣기하여 업로드하세요.</p>
+        <CopyToClipboard
+          text={
+            `#${newNumber}번 제보 😁` +
+            `\nhttps://bamboo.buldang.xyz/post/${newNumber}`
+          }
+          onCopy={() => setCopySuccess(true)}
+        >
+          <button type="button" disabled={!newNumber}>
+            클립보드에 복사
+          </button>
+        </CopyToClipboard>
+        <p>4. 게시글의 URL을 아래에 붙여넣기 하세요.</p>
         <label htmlFor="link-input">페이스북 링크</label>
         <input
           id="link-input"
