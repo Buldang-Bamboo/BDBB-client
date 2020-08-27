@@ -28,7 +28,7 @@ const spinAnimation = css.resolve`
 function AcceptModal({ post, modalHandler, onAccept, onUpdateFbLink }) {
   const [fbLink, setFbLink] = useState('')
   const [isLoading, setLoading] = useState(false)
-  const [newNumber, setNewNumber] = useState(null)
+  const [newNumber, setNewNumber] = useState(post.number)
   const [isCopySuccess, setCopySuccess] = useState(false)
 
   const reset = () => {
@@ -75,9 +75,17 @@ function AcceptModal({ post, modalHandler, onAccept, onUpdateFbLink }) {
           </strong>
         </p>
         <p>1. 아래 버튼을 눌러 글을 승인하세요.</p>
-        <button type="button" disabled={isLoading} onClick={handleAccept}>
+        <button
+          type="button"
+          disabled={isLoading || newNumber}
+          onClick={handleAccept}
+        >
           {!isLoading ? (
-            '승인'
+            !newNumber ? (
+              '승인'
+            ) : (
+              '이미 승인된 제보입니다.'
+            )
           ) : (
             <FiLoader className={classNames('spin', spinAnimation.className)} />
           )}
@@ -90,12 +98,13 @@ function AcceptModal({ post, modalHandler, onAccept, onUpdateFbLink }) {
             ` ${timeText(post.createdAt)}\n\n` +
             (post.title ? `<${post.title}>\n\n` : '') +
             post.content +
-            `\n\n#${(post.tag || '').replace(/\s/g, '')}`
+            `\n\n#${(post.tag || '').replace(/\s/g, '')}` +
+            `\n\nhttps://bamboo.buldang.xyz/post/${newNumber}`
           }
           onCopy={() => setCopySuccess(true)}
         >
           <button type="button" disabled={!newNumber}>
-            클립보드에 복사
+            {newNumber ? '클립보드에 복사' : '승인 처리를 먼저 해주세요'}
           </button>
         </CopyToClipboard>
         {isCopySuccess && (
@@ -110,7 +119,7 @@ function AcceptModal({ post, modalHandler, onAccept, onUpdateFbLink }) {
           onCopy={() => setCopySuccess(true)}
         >
           <button type="button" disabled={!newNumber}>
-            클립보드에 복사
+            {newNumber ? '클립보드에 복사' : '승인 처리를 먼저 해주세요'}
           </button>
         </CopyToClipboard>
         <p>4. 게시글의 URL을 아래에 붙여넣기 하세요.</p>

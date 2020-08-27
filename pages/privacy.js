@@ -5,7 +5,7 @@ function Policy() {
   return (
     <>
       <Head>
-        <meta property="og:title" content="불대숲" />
+        <meta property="og:title" content="천안불당고 대나무숲 | Bulind" />
         <meta
           property="og:description"
           content="불당고 익명 게시판, 천안불당고등학교 대나무숲"
@@ -17,7 +17,7 @@ function Policy() {
         <strong>제 1조 (개인정보의 처리목적)</strong>
         <ol>
           <li>
-          천안불당고등학교 대나무숲(이하 불대숲)에서는 서비스 제공을
+            천안불당고등학교 대나무숲(이하 불대숲)에서는 서비스 제공을
             위한 최소한의 개인정보만 처리하며, 서비스 제공 이외의 용도로는
             사용되지 않습니다.
           </li>

@@ -114,7 +114,7 @@ export default function Index({ postData, verifier }) {
   return (
     <>
       <Head>
-        <meta property="og:title" content="🎍 대나무숲 🎍" />
+        <meta property="og:title" content="천안불당고 대나무숲 | Bulind" />
         <meta
           property="og:description"
           content="불당고 익명 게시판, 천안불당고등학교 대나무숲"
@@ -128,7 +128,7 @@ export default function Index({ postData, verifier }) {
         <div className="nav-items">
           <a onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
             {theme === 'dark' ? '밝은' : '어두운'} 테마
-            </a>
+          </a>
           <a onClick={() => handleModal('delete', {})}>제보 관리</a>
         </div>
       </Navigator>
