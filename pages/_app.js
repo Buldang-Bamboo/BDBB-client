@@ -23,7 +23,7 @@ function ThemeWrapper({ children }) {
   return (
     <>
       <Head>
-        <title>🎍 대나무숲 🎍</title>
+        <title>천안불당고 대나무숲 | Bulind</title>
         <link
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/light.css"
