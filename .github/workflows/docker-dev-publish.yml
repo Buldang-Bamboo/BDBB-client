@@ -12,7 +12,7 @@ jobs:
         uses: elgohr/Publish-Docker-Github-Action@master
         with:
           name: chanok9417/bdbb-client 
-          username: chanok9417
-          password: joung0406
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
           dockerfile: Dockerfile
           tag_names: true
