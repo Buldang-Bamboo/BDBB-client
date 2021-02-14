@@ -26,11 +26,11 @@ function ThemeWrapper({ children }) {
         <title>천안불당고 대나무숲 | Bulind</title>
         <link
           rel="stylesheet"
-          href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/light.css"
+          href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/light.min.css"
         />
         <link
           rel="stylesheet"
-          href={`https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/${theme}.css`}
+          href={`https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/${theme}.min.css`}
         />
       </Head>
       <ThemeContext.Provider value={[theme, (t) => setTheme(t)]}>

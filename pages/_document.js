@@ -10,7 +10,6 @@ class CustomDocument extends Document {
     return (
       <Html>
         <Head>
-          <meta property="fb:pages" content="323608828486429" />
           {/* Global Site Tag (gtag.js) - Google Analytics */}
           <script
             async
@@ -26,7 +25,6 @@ class CustomDocument extends Document {
           `
             }}
           />
-          <script data-ad-client="ca-pub-8146562096769982" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
           <link
             rel="preload"
             as="font"
